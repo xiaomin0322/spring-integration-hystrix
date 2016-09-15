@@ -1,6 +1,21 @@
 # CircuitBreaker
 An Spring AOP annotation HystrixCommand using the NetFlix Hystrix circuit breaker (https://github.com/Netflix/Hystrix)
+Use
 
+    
+    @HystrixCommand
+    public String methodName() throws MyException {
+    }
+    
+    @HystrixCommand(commandProperties = {@HystrixProperty(name="executionTimeoutInMilliseconds",value = "0") })
+	public String withZeroTimeout(String str) {
+	
+	
+	@HystrixCommand(threadPoolProperties = { @HystrixProperty(name = "coreSize", value = "50"),
+			@HystrixProperty(name = "maxQueueSize", value = "-1") })
+	public String get(String str) {
+		return str;
+	}
 
 ### Spring config
 <?xml version="1.0" encoding="UTF-8"?>
