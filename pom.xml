@@ -6,7 +6,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.integration</groupId>
-	<artifactId>spring-integration-redis</artifactId>
+	<artifactId>spring-integration-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
